@@ -10,3 +10,4 @@
 
 - [Counter](https://hazadus.github.io/alpine-demo/src/counter.html): [src/counter.html](./src/counter.html)
 - [Counter 2](https://hazadus.github.io/alpine-demo/src/counter2.html): [src/counter2.html](./src/counter2.html)
+- [Signup Form](https://hazadus.github.io/alpine-demo/src/form.html): [src/form.html](./src/form.html)
