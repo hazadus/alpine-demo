@@ -3,39 +3,41 @@
 
 <head>
     <title>Alpine.js Demo: Form</title>
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="form.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="form.js"></script>
 </head>
 
 <body>
-    <form>
+    <form x-data="signupForm">
         <h1 x-data="{ message: 'I ❤️ Alpine' }" x-text="message"></h1>
 
         <div class="form-field">
             <label>
-                <span></span>Username:
-                <input type="text" maxlength="15" required>
+                <span>Username:</span>
+                <input x-model="username" type="text" maxlength="15" required>
+                <div x-text="username"></div>
             </label>
         </div>
 
         <div class="form-field password">
             <label>
                 <span>Password:</span>
-                <input type="password" minlength="8" required>
+                <input x-model="password" type="password" minlength="8" required>
             </label>
         </div>
 
         <div class="form-field">
             <label>
                 <span>Confirm Password:</span>
-                <input type="password" minlength="8" required>
+                <input x-model="passwordConfirm" type="password" minlength="8" required>
             </label>
         </div>
 
         <div class="form-field">
             <label>
                 Favorite Color:
-                <select required>
+                <select x-model="color" required>
                     <option value="">Select a color</option>
                     <option value="red">Red</option>
                     <option value="green">Green</option>
@@ -47,13 +49,13 @@
         <div class="form-field">
             <label>
                 <span>Your Bio:</span>
-                <textarea maxlength="128"></textarea>
+                <textarea x-model="bio" maxlength="128"></textarea>
             </label>
         </div>
 
         <div class="form-field newsletter">
             <label>
-                <input type="checkbox">
+                <input x-model="newsletter" type="checkbox">
                 <span>Subscribe to our newsletter</span>
             </label>
         </div>
