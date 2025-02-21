@@ -13,6 +13,14 @@
         <h1 x-data="{ message: 'I ❤️ Alpine' }" x-text="message"></h1>
 
         <div class="form-field">
+            <!-- NB: class будет назначен постоянно, x-bind:class добавляет
+             к нему классы при выполнении условий. Содержит объект, где key -
+             название класса, value - условие, при выполнении которого класс
+             назначается. -->
+            <!-- NB: вместо x-bind:class можно использовать сокращение :class -->
+            <p class="hint" x-bind:class="{ 'warning': username.length > 10 }">
+                <span x-text="username.length"></span> / 15
+            </p>
             <label>
                 <span>Username:</span>
                 <input x-model="username" type="text" maxlength="15" required>
@@ -47,6 +55,9 @@
         </div>
 
         <div class="form-field">
+            <p class="hint" x-bind:class="{ 'warning': bio.length > 120 }">
+                <span x-text="bio.length"></span> / 128
+            </p>
             <label>
                 <span>Your Bio:</span>
                 <textarea x-model="bio" maxlength="128"></textarea>

@@ -13,4 +13,4 @@
 - [Counter 2](https://hazadus.github.io/alpine-demo/src/counter2.html): [src/counter2.html](./src/counter2.html)
   - Показано, как декомпозировать счётчик на отдельные файлы.
 - [Signup Form](https://hazadus.github.io/alpine-demo/src/form.html): [src/form.html](./src/form.html)
-  - Форма и реактивная увязка полей с переменными.
+  - Форма и реактивная увязка полей с переменными. Условное назначение стилей элементам формы.
