@@ -7,5 +7,8 @@ document.addEventListener("alpine:init", () => {
     color: '',
     bio: '',
     newsletter: false,
+    submitForm() {
+      alert('Form submitted!');
+    }
   }));
 });

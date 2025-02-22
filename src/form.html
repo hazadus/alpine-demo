@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <form x-data="signupForm">
+    <form x-data="signupForm" @submit.prevent="submitForm">
         <h1 x-data="{ message: 'I ❤️ Alpine' }" x-text="message"></h1>
 
         <div class="form-field">
