@@ -31,8 +31,11 @@
         <div class="form-field password">
             <label>
                 <span>Password:</span>
-                <input x-model="password" type="password" minlength="8" required>
+                <input x-model="password" :type="showPassword ? 'text' : 'password'" minlength="8" required>
             </label>
+            <button type="button" @click="showPassword = !showPassword">
+                <span x-text="showPassword ? 'Hide' : 'Show'"></span>
+            </button>
         </div>
 
         <div class="form-field">

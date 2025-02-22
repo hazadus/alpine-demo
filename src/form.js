@@ -7,6 +7,7 @@ document.addEventListener("alpine:init", () => {
     color: '',
     bio: '',
     newsletter: false,
+    showPassword: false,
     submitForm() {
       alert('Form submitted!');
     }
