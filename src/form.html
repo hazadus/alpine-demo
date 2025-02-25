@@ -86,6 +86,16 @@
         </div>
 
         <button type="submit">Submit</button>
+
+        <!-- Модалка -->
+        <!-- NB: см. x-cloak в form.css: нужно, чтобы модалка не "мигала" при загрузке страницы -->
+        <div class="overlay" x-show="success" x-cloak>
+            <div class="modal">
+                <h2>Success!</h2>
+                <p>Your form has been submitted.</p>
+                <button type="button" @click="success = false">Close</button>
+            </div>
+        </div>
     </form>
 </body>
 

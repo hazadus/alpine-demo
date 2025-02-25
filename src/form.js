@@ -9,6 +9,7 @@ document.addEventListener("alpine:init", () => {
     newsletter: false,
     showPassword: false,
     colorChoices: ['red', 'green', 'blue', 'yellow', 'purple', 'orange', 'pink'],
+    success: false,
 
     errors: {},
     validateForm(){
@@ -41,10 +42,10 @@ document.addEventListener("alpine:init", () => {
         return
       }
 
-      alert('✅ Form submitted!');
       // В данном случае событие будет submit, а цель - форма
       // Очистим форму после "отправки" данных
       $event.target.reset();
+      this.success = true;
     }
   }));
 });
