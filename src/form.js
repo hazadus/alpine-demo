@@ -8,6 +8,7 @@ document.addEventListener("alpine:init", () => {
     bio: '',
     newsletter: false,
     showPassword: false,
+    colorChoices: ['red', 'green', 'blue', 'yellow', 'purple', 'orange', 'pink'],
 
     errors: {},
     validateForm(){

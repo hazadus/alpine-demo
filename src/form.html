@@ -58,9 +58,9 @@
                 Favorite Color:
                 <select x-model="color" required>
                     <option value="">Select a color</option>
-                    <option value="red">Red</option>
-                    <option value="green">Green</option>
-                    <option value="blue">Blue</option>
+                    <template x-for="choice in colorChoices" :key="choice">
+                        <option x-text="choice" :value="choice"></option>
+                    </template>
                 </select>
             </label>
         </div>
