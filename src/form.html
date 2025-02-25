@@ -22,10 +22,12 @@
                 <span x-text="username.length"></span> / 15
             </p>
             <label>
-                <span>Username:</span>
+                <span>Username:</span>&nbsp;<span x-text="username"></span>
                 <input x-model="username" type="text" maxlength="15" required>
-                <div x-text="username"></div>
             </label>
+            <template x-if="errors.username">
+                <p class="error" x-text="errors.username"></p>
+            </template>
         </div>
 
         <div class="form-field password">
@@ -36,6 +38,9 @@
             <button type="button" @click="showPassword = !showPassword">
                 <span x-text="showPassword ? 'Hide' : 'Show'"></span>
             </button>
+            <template x-if="errors.password">
+                <p class="error" x-text="errors.password"></p>
+            </template>
         </div>
 
         <div class="form-field">
@@ -43,6 +48,9 @@
                 <span>Confirm Password:</span>
                 <input x-model="passwordConfirm" type="password" minlength="8" required>
             </label>
+            <template x-if="errors.passwordConfirm">
+                <p class="error" x-text="errors.passwordConfirm"></p>
+            </template>
         </div>
 
         <div class="form-field">
@@ -65,6 +73,9 @@
                 <span>Your Bio:</span>
                 <textarea x-model="bio" maxlength="128"></textarea>
             </label>
+            <template x-if="errors.bio">
+                <p class="error" x-text="errors.bio"></p>
+            </template>
         </div>
 
         <div class="form-field newsletter">
