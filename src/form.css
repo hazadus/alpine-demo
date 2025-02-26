@@ -130,3 +130,14 @@ button[type="submit"] {
 [x-cloak] {
   display: none !important;
 }
+/* Transitions */
+.modal {
+  transition: all ease-in 300ms;
+  transition-delay: 300ms;
+}
+.modal.on-screen {
+  transform: translateY(0);
+}
+.modal.off-screen {
+  transform: translateY(-100vh);
+}

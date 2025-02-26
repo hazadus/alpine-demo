@@ -89,8 +89,10 @@
 
         <!-- Модалка -->
         <!-- NB: см. x-cloak в form.css: нужно, чтобы модалка не "мигала" при загрузке страницы -->
-        <div class="overlay" x-show="success" x-cloak>
-            <div class="modal">
+        <div class="overlay" x-show="success" x-cloak x-transition.opacity.duration.500ms>
+            <!-- NB: повторяем x-show чтобы transtion применялся независимо от оверлея к модалке -->
+            <div class="modal" x-show="success" x-transition:enter-start="off-screen"
+                x-transition:enter-end="on-screen">
                 <h2>Success!</h2>
                 <p>Your form has been submitted.</p>
                 <button type="button" @click="success = false">Close</button>

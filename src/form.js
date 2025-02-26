@@ -1,11 +1,11 @@
 document.addEventListener("alpine:init", () => {
   // NB: скобки после => обязательны, чтобы вернуть объект
   Alpine.data('signupForm', () => ({
-    username: '',
-    password: '',
-    passwordConfirm: '',
-    color: '',
-    bio: '',
+    username: 'Hazadus',
+    password: 'password',
+    passwordConfirm: 'password',
+    color: 'purple',
+    bio: 'I am a web developer',
     newsletter: false,
     showPassword: false,
     colorChoices: ['red', 'green', 'blue', 'yellow', 'purple', 'orange', 'pink'],
