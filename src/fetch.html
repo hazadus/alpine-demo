@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Alpine.js Demo: Fetch</title>
+  <link rel="stylesheet" href="form.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="fetch.js"></script>
+</head>
+
+<body>
+  <div x-data="demo">
+    <h2>Posts</h2>
+    <ul>
+      <template x-for="post in posts" :key="post.id">
+        <li x-text="post.title"></li>
+      </template>
+    </ul>
+  </div>
+
+  <!-- $watch example -->
+  <div>
+    <h2>Change background color</h2>
+    <input type="text" x-model="color" placeholder="Enter a color" />
+  </div>
+</body>
+
+</html>

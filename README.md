@@ -14,3 +14,5 @@
   - Показано, как декомпозировать счётчик на отдельные файлы.
 - [Signup Form](https://hazadus.github.io/alpine-demo/src/form.html): [src/form.html](./src/form.html)
   - Форма и реактивная увязка полей с переменными. Условное назначение стилей элементам формы.
+- [Fetch](https://hazadus.github.io/alpine-demo/src/fetch.html): [src/fetch.html](./src/fetch.html)
+  - Демо `init()` компонента, загрузки данных из API, `$watch`
